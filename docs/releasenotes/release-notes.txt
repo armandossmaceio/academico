@@ -1,0 +1,177 @@
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 24-10-2016
+==========================================================================================================================================
+Atividade Realizada: 
+
+        - Caso não existisse aluno/professor/turma cadastrado no sistema, e escolhesse a opção listar, era exibido uma exceção informando tal erro, e logo após era exibido uma tela, simulando a lista de alunos, porém vazia. Foi resolvido tal problema. 	- Cada turma tem um identificador, que no caso seria um código, e ele deveria ser exibido ao usuário após o cadastro. Isso acontece quando é selecionado a opção listar.	- Ao matricular um aluno ou associar um professor a uma turma, era exibido em uma lista apenas o id da turma. Foi adicionado a essa lista o nome.	- Quando era cadastrado uma turma, ele trocava o nome do departamento com o nome da disciplina. Foi realizado tal correção.	- Adicionado ao na interface do aluno/professor/turma para criar uma tabela caso não exista. Também foi implementado todos os métodos para realizar operações no banco.	- Integração com o banco de dados.
+
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 25-01-2016
+==========================================================================================================================================
+
+ Ocorrência : Tratamento de excessões para as classes Turma e Professor
+ Ajustes:  Criação de classes para tratar excessões para as classes Turmas e Professor
+  
+Ocorrência :   Melhoria para exibição de turmas
+Ajustes:   Implementação de comboBox para seleção de turmas
+         
+Ocorrência : Necessidade de criar a funcionalidade  de associação Professor/Turma
+Ajustes:  Criação de funcionalidade para associar professor a turma
+ 
+Ocorrência : atualização de Tela Sobre
+Ajuste:  Sobre (Colaboradores)
+
+
+
+
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 29-12-2015
+==========================================================================================================================================
+
+O diretório analise foi dividido em subdiretorios para melhorar a organizacao do repositorio. Foram adicionados os subdiretorios
+diagramas e especificacoes. Foram movidos os arquivos correspondentes para cada subdiretorio.
+
+Foi criado o diagrama de sequencia para o caminho feliz da insercao de um aluno.
+
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 23-11-2015
+==========================================================================================================================================
+
+ Ocorrência : Sem setup environment do projeto
+ Ajuste : Criar o arquivo para preparação de ambiente para desenvolvimento 
+ 
+Ocorrência : atualização de  funcionalidades 
+Ajuste: Foram inseridas as funcionalidades
+			Trancar (Aluno em Turma)
+			Associar (Professor em Turma)
+			Remover (Professor em Turma)
+			Listar (Alunos da Turma)
+			Sobre (Colaboradores)
+
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 10-11-2015
+==========================================================================================================================================
+
+ATUALIZAÇÕES IMPORTANTES
+------------------------------------------------------------------------------------------------------------------------------------------
+Foi desenvolvida toda a GUI (Graphical User Interface) necessária para a utilização do projeto completo.
+Para a construção de novos módulos, é necessário a criação da GUI complementar.
+
+LISTA DE FUNCIONALIDADES INSERIDAS NA RELEASE
+------------------------------------------------------------------------------------------------------------------------------------------
+***Modulo Professor***
+
+Inserir Professor
+Listar Professores
+Buscar Professor
+Remover Professor
+Verificar Professor
+
+Alterar Professor
+-Alterar CPF
+-Alterar Nome
+-Alterar Lotação
+-Alterar Título
+
+Ver Quantidade de Professores Cadastrados
+
+
+***Modulo Turma***
+
+Inserir Turma
+Listar Turmas
+Buscar Turma
+Remover Turma
+Verificar Turma
+
+Alterar Turma
+-Alterar Departamento
+-Alterar Disciplina
+-Alterar Carga Horária
+
+Ver Quantidade de Turmas Cadastradas
+
+Matricular Aluno na Turma
+
+Ver Alunos de uma Turma
+
+
+***Modulo Aluno***
+
+Verificar Aluno
+
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 10-11-2015
+==========================================================================================================================================
+******************************************************************************************************************************************
+==========================================================================================================================================
+[PROJETO UNIVERSIDADE SIMPLES] Release Notes - 21-10-2014
+==========================================================================================================================================
+
+LISTA DE FUNCIONALIDADE DA RELEASE
+------------------------------------------------------------------------------------------------------------------------------------------
+Inserir Aluno
+Listar Alunos
+Buscar Aluno
+Remover Aluno
+
+Alterar Aluno
+-Alterar Nome
+-Alterar Matrícula
+-Alterar Curso
+
+Ver Quantidade de Alunos Cadastrados
+
+ARTEFATOS GERADOS
+------------------------------------------------------------------------------------------------------------------------------------------
+- Diagrama de Classes
+- JavaDocs
+
+Todos podem ser acessados a partir de
+https://svn.code.sf.net/p/projetouniversidadesimples/code/PUniversidadeSimples/docs/
+
+PROCEDIMENTOS PARA BAIXAR O PROJETO
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Projeto validado para o Eclipse Java EE IDE - Versão Juno e plugin subclipse instalado e configurado no Eclipse
+2. Menu File -> New -> Other
+3. Selecione o wizard SVN -> Checkout Projects from SVN
+4. Select/Create location -> Create a new repository location
+5. Preencha com a url https://svn.code.sf.net/p/projetouniversidadesimples/code/PUniversidadeSimples/
+6. Selecione o projeto PUniversidadeSimples.
+
+
+PROCEDIMENTOS PARA IMPORTAR DA BASE DE DADOS (caso queira)
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Navegue até a pasta script, localizada na da pasta docs, e abra o arquivo sistemaEscolar.sql utilizando alguma ferramente de manipulação
+   de banco de dados. Ex: HeidiSQL ou MySQL Workbench. Nesse processo, utilizamos a ferramenta HeidiSQL.
+   Obs.: Esse arquivo com extensão sql contém todos os comandos necessários para geração da estrutura do banco de dados sistemaEscolar.
+2. Clique com o botão direito do mouse na aréa de texto (área que contém os comandos SQL) e clique em Executar.
+3. O banco será gerado, comtendo 4 tabelas.
+
+
+PROCEDIMENTOS PARA INTEGRAR O APLIAÇÃO Á BASE DE DADOS.
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Após o download, verifique se o projeto apresenta algum ícone de erro. O erro acontece devido o referenciamento de um endereço inválido
+   do conector Mysql.
+2. Em caso de erro, execute o procedimento de integração partir do passo 2.1. Se não houver erros, siga para o passo 3.
+	2.1 Clique com o botão direito do mouse sobre projeto e vá para Properties.
+	2.2 Um nova janela aparecerá. Escolha Java Build Path, no menu à esquerda.
+	2.3 Clique na aba Libraries e selecione o conector Mysql. Clique em Remove, situado no menu à esquerda.
+	2.4 Clique em Add External JARs... e navegue até a pasta lib do projeto. É onde o conector estará.
+	2.5 Clique em OK. O ícone de erro deve desaparecer.
+3. Vá até o pacote org.ufpi.es.sistema.util e abra a classe ConnectionManager.
+4. Encontre o método openConnection e troque os valores das variáveis user e pwd, colocando o usuário e senha de acesso do seu gerenciador de
+   banco de dados, respectivamente.
+
+
+PROCEDIMENTO PARA EXECUTAR A APLICAÇÃO USANDO A IDE
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Escolha o tipo de repositório (banco de dados, lista, arquivo e etc...) indo no construtor da classe Fachada, localizada no pacote
+   org.ufpi.es.controle.
+2. Vá ao pacote org.ufpi.es.view.console e abra a classe TelaPrincipalConsole (Interface Console) ou no pacote org.ufpi.es.view.gui e abra a classe MainGUI (Interface Gráfica).
+3. Clique com o botão direito do mouse, selecione opção Run As e ecolha a opção Java Application.
+4. Um menu vai aparecer. Digite um número correpodente a cada operação.
+
+==========================================================================================================================================
+[PROJETO UNIVERSIADE SIMPLES] Release Notes - 21-10-2014
+==========================================================================================================================================

@@ -1,0 +1,14 @@
+br.ufpi.es.controller
+br.ufpi.es.dao
+br.ufpi.es.model
+br.ufpi.es.system.exception
+br.ufpi.es.system.exception.aluno
+br.ufpi.es.system.exception.professor
+br.ufpi.es.system.exception.turma
+br.ufpi.es.system.util
+br.ufpi.es.test
+br.ufpi.es.view.console
+br.ufpi.es.view.gui
+br.ufpi.es.view.gui.aluno
+br.ufpi.es.view.gui.professor
+br.ufpi.es.view.gui.turma

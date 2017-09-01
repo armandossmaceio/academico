@@ -1,0 +1,8 @@
+Atores: 
+1) Professor
+2) Aluno
+
+Casos de Uso:
+1) Gerenciar Professor (Inserir, Buscar, Remover, Alterar, Listar, Verificar a Quantidade, Associar com Turma, Remover da Turma)
+2) Gerenciar Aluno     (Inserir, Buscar, Remover, Alterar, Listar, Verificar a Quantidade, Matricular em Turma, Trancar Turma)
+3) Gerenciar Turma     (Inserir, Buscar, Remover, Alterar, Listar, Verificar a Quantidade, Listar Alunos por Turma)
